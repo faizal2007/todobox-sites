@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faizal2007.github.io/todobox-sites/sitemap.xml

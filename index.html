@@ -3,247 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TodoBox - Personal Task Management Flask app with tasks, quotes, authentication, and multi-database support">
-    <title>TodoBox - Personal Task Management</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoBox - Flask Todo Application</title>
     
     <!-- Bootstrap 4 CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     
     <style>
-        :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
-        
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hero-section p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-        
-        .btn-github {
-            background-color: #24292e;
-            color: white;
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn-github:hover {
-            background-color: #1a1e22;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .btn-github i {
-            margin-right: 8px;
-        }
-        
-        .features-section {
             padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .tech-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
             background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            font-size: 14px;
         }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: var(--secondary-color);
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
         }
-        
-        .feature-card {
-            text-align: center;
-            padding: 30px 20px;
-            margin-bottom: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
+        .code-block code {
+            color: #212529;
+            font-family: 'Courier New', Courier, monospace;
         }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .feature-icon {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-        
-        .feature-card p {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-        }
-        
         footer {
-            background-color: var(--secondary-color);
+            background-color: #343a40;
             color: white;
             padding: 30px 0;
-            text-align: center;
+            margin-top: 60px;
         }
-        
         footer a {
-            color: var(--primary-color);
+            color: #667eea;
             text-decoration: none;
         }
-        
         footer a:hover {
+            color: #764ba2;
             text-decoration: underline;
         }
-        
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-section p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero-section">
+    <div class="hero-section">
         <div class="container">
-            <h1>TodoBox - Personal Task Management</h1>
-            <p class="lead">Flask-based app with tasks, quotes, auth, multi-DB</p>
-            <a href="https://github.com/faizal2007/todobox-sites" class="btn-github" target="_blank">
-                <i class="fab fa-github"></i>View on GitHub
-            </a>
+            <h1 class="display-4 font-weight-bold">TodoBox</h1>
+            <p class="lead">A modern, Flask-based Todo application with user authentication</p>
         </div>
-    </section>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="section">
+        <div class="container">
+            <h2 class="mb-4">Tech Stack</h2>
+            <p class="mb-3">Built with modern Python web development technologies:</p>
+            <div>
+                <span class="tech-badge"><strong>Flask 2.3.2</strong> - Web Framework</span>
+                <span class="tech-badge"><strong>SQLAlchemy</strong> - ORM</span>
+                <span class="tech-badge"><strong>Flask-Login</strong> - Authentication</span>
+                <span class="tech-badge"><strong>Bootstrap 4</strong> - Frontend</span>
+                <span class="tech-badge"><strong>Python 3.10+</strong> - Runtime</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Start Section -->
+    <div class="section bg-light">
+        <div class="container">
+            <h2 class="mb-4">Quick Start</h2>
+            <p>Get TodoBox up and running in just a few steps:</p>
+            
+            <h5 class="mt-4">1. Install Dependencies</h5>
+            <div class="code-block">
+                <code>pip install -r requirements.txt</code>
+            </div>
+
+            <h5 class="mt-4">2. Configure Environment</h5>
+            <div class="code-block">
+                <code>cp .flaskenv.example .flaskenv</code>
+            </div>
+
+            <h5 class="mt-4">3. Initialize Database</h5>
+            <div class="code-block">
+                <code>flask db upgrade</code>
+            </div>
+
+            <h5 class="mt-4">4. Run the Application</h5>
+            <div class="code-block">
+                <code>flask run</code>
+            </div>
+
+            <p class="mt-3 text-muted">The application will be available at <strong>http://localhost:5000</strong></p>
+        </div>
+    </div>
+
+    <!-- API Documentation Section -->
+    <div class="section">
+        <div class="container">
+            <h2 class="mb-4">API Example</h2>
+            <p>TodoBox provides a RESTful API for managing todos. Here's a quick example:</p>
+            
+            <h5 class="mt-4">Get All Todos</h5>
+            <div class="code-block">
+                <code>curl -X GET http://localhost:5000/api/todo</code>
+            </div>
+
+            <h5 class="mt-4">Example Response</h5>
+            <div class="code-block">
+                <code>
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Sample Todo",
+      "completed": false,
+      "created_at": "2024-01-15T10:30:00Z"
+    }
+  ]
+}
+                </code>
+            </div>
+        </div>
+    </div>
 
     <!-- Features Section -->
-    <section class="features-section">
+    <div class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Features</h2>
+            <h2 class="mb-4">Features</h2>
             <div class="row">
-                <!-- Feature 1: Todo Management -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h3>Todo Management</h3>
-                        <p>Organize your tasks efficiently with a powerful task management system. Create, update, and track your todos with ease.</p>
-                    </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">✅</div>
+                    <h5>Task Management</h5>
+                    <p>Create, update, and delete todos with ease</p>
                 </div>
-
-                <!-- Feature 2: Wisdom Quotes -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Wisdom Quotes</h3>
-                        <p>Get inspired daily with motivational quotes and wisdom. Stay motivated and focused on your goals.</p>
-                    </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">🔐</div>
+                    <h5>User Authentication</h5>
+                    <p>Secure login and registration with Flask-Login</p>
                 </div>
-
-                <!-- Feature 3: Authentication -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Authentication</h3>
-                        <p>Secure user authentication system to protect your personal data and ensure privacy.</p>
-                    </div>
-                </div>
-
-                <!-- Feature 4: Modern UI -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3>Modern UI</h3>
-                        <p>Beautiful and intuitive user interface designed for the best user experience across all devices.</p>
-                    </div>
-                </div>
-
-                <!-- Feature 5: Security -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <h3>Security</h3>
-                        <p>Built with security best practices to keep your data safe and protected from unauthorized access.</p>
-                    </div>
-                </div>
-
-                <!-- Feature 6: Storage -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Storage</h3>
-                        <p>Multi-database support with flexible storage options to ensure your data is always accessible.</p>
-                    </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">📱</div>
+                    <h5>Responsive Design</h5>
+                    <p>Works seamlessly on desktop and mobile devices</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 TodoBox. Built with Flask and Bootstrap 4.</p>
-            <p>
-                <a href="https://github.com/faizal2007/todobox-sites" target="_blank">
-                    <i class="fab fa-github"></i> GitHub Repository
-                </a>
-            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>TodoBox</h5>
+                    <p class="text-muted">A Flask-based Todo application</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h5>Links</h5>
+                    <p>
+                        <a href="https://github.com/faizal2007/todobox-sites" target="_blank">GitHub Repository</a>
+                    </p>
+                    <p class="text-muted">Licensed under <a href="https://github.com/faizal2007/todobox-sites/blob/main/LICENSE" target="_blank">MIT License</a></p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="mb-0 text-muted">&copy; 2025 TodoBox. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <!-- Bootstrap 4 JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 </html>

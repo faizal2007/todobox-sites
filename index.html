@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoBox - Flask Todo Application</title>
+    
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .tech-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            color: #212529;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">TodoBox</h1>
+            <p class="lead">A modern, Flask-based Todo application with user authentication</p>
+        </div>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="section">
+        <div class="container">
+            <h2 class="mb-4">Tech Stack</h2>
+            <p class="mb-3">Built with modern Python web development technologies:</p>
+            <div>
+                <span class="tech-badge"><strong>Flask 2.3.2</strong> - Web Framework</span>
+                <span class="tech-badge"><strong>SQLAlchemy</strong> - ORM</span>
+                <span class="tech-badge"><strong>Flask-Login</strong> - Authentication</span>
+                <span class="tech-badge"><strong>Bootstrap 4</strong> - Frontend</span>
+                <span class="tech-badge"><strong>Python 3.10+</strong> - Runtime</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Start Section -->
+    <div class="section bg-light">
+        <div class="container">
+            <h2 class="mb-4">Quick Start</h2>
+            <p>Get TodoBox up and running in just a few steps:</p>
+            
+            <h5 class="mt-4">1. Install Dependencies</h5>
+            <div class="code-block">
+                <code>pip install -r requirements.txt</code>
+            </div>
+
+            <h5 class="mt-4">2. Configure Environment</h5>
+            <div class="code-block">
+                <code>cp .flaskenv.example .flaskenv</code>
+            </div>
+
+            <h5 class="mt-4">3. Initialize Database</h5>
+            <div class="code-block">
+                <code>flask db upgrade</code>
+            </div>
+
+            <h5 class="mt-4">4. Run the Application</h5>
+            <div class="code-block">
+                <code>flask run</code>
+            </div>
+
+            <p class="mt-3 text-muted">The application will be available at <strong>http://localhost:5000</strong></p>
+        </div>
+    </div>
+
+    <!-- API Documentation Section -->
+    <div class="section">
+        <div class="container">
+            <h2 class="mb-4">API Example</h2>
+            <p>TodoBox provides a RESTful API for managing todos. Here's a quick example:</p>
+            
+            <h5 class="mt-4">Get All Todos</h5>
+            <div class="code-block">
+                <code>curl -X GET http://localhost:5000/api/todo</code>
+            </div>
+
+            <h5 class="mt-4">Example Response</h5>
+            <div class="code-block">
+                <code>
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Sample Todo",
+      "completed": false,
+      "created_at": "2025-11-26T06:00:00"
+    }
+  ]
+}
+                </code>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="section bg-light">
+        <div class="container">
+            <h2 class="mb-4">Features</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">✅</div>
+                    <h5>Task Management</h5>
+                    <p>Create, update, and delete todos with ease</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">🔐</div>
+                    <h5>User Authentication</h5>
+                    <p>Secure login and registration with Flask-Login</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="feature-icon">📱</div>
+                    <h5>Responsive Design</h5>
+                    <p>Works seamlessly on desktop and mobile devices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>TodoBox</h5>
+                    <p class="text-muted">A Flask-based Todo application</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h5>Links</h5>
+                    <p>
+                        <a href="https://github.com/faizal2007/todobox-sites" target="_blank">GitHub Repository</a>
+                    </p>
+                    <p class="text-muted">Licensed under <a href="https://github.com/faizal2007/todobox-sites/blob/main/LICENSE" target="_blank">MIT License</a></p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="mb-0 text-muted">&copy; 2025 TodoBox. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 4 JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

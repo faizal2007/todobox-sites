@@ -444,9 +444,9 @@ footer .social-links a:hover,
 
 .text-gradient {
   background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .shadow-custom {
@@ -494,10 +494,14 @@ footer .social-links a:hover,
   transition: all var(--transition-speed) ease;
 }
 
-.text-primary {
-  color: var(--primary-blue) !important;
+/* Override Bootstrap primary color for TodoBox brand */
+.text-primary,
+a.text-primary,
+.btn.text-primary {
+  color: var(--primary-blue);
 }
 
-.bg-primary {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)) !important;
+.bg-primary,
+.btn-primary.bg-primary {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
 }

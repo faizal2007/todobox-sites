@@ -413,3 +413,36 @@ div[id] {
     color: #004085;
 }
 
+/* Screenshot Section */
+.screenshot-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-card:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-card img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.screenshot-card img:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2) !important;
+}
+
+.screenshot-card h5 {
+    color: #2d3748;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.screenshot-card p {
+    color: #718096;
+    font-size: 0.9rem;
+}

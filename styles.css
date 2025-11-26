@@ -238,7 +238,7 @@ body {
   color: #f8f9fa;
   padding: 3px 8px;
   border-radius: 4px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', Courier, monospace;
   font-size: 0.95rem;
 }
 
@@ -443,6 +443,7 @@ footer .social-links a:hover,
 }
 
 .text-gradient {
+  color: var(--primary-blue); /* Fallback for browsers that don't support background-clip */
   background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
   background-clip: text;
   -webkit-background-clip: text;
@@ -474,6 +475,7 @@ footer .social-links a:hover,
 }
 
 /* ===== Bootstrap Overrides ===== */
+/* Note: This max-width ensures content doesn't get too wide on large screens */
 .container {
   max-width: 1200px;
 }

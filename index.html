@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- SEO Meta Tags -->
-    <title>TodoBox - Modern Flask Todo Application with Authentication</title>
-    <meta name="description" content="TodoBox is a Flask-based personal task management application with wisdom quotes, user authentication, Google OAuth, and multi-database support (SQLite/MySQL/PostgreSQL). Built with Python, Flask, and Bootstrap 4.">
-    <meta name="keywords" content="Flask, Todo App, Python, SQLAlchemy, Flask-Login, REST API, Bootstrap, Task Management, Open Source, Web Application, Google OAuth, Wisdom Quotes, Multi-Database, ZenQuotes, Production Ready">
+    <title>TodoBox v1.3.5 - Modern Flask Todo Application with Complete Documentation</title>
+    <meta name="description" content="TodoBox v1.3.5 - Flask-based personal task management application with user authentication, Google OAuth, 23 comprehensive docs with 100+ examples, multi-database support (SQLite/MySQL/PostgreSQL). Production-ready with accessibility compliance.">
+    <meta name="keywords" content="Flask, Todo App, Python, SQLAlchemy, Flask-Login, REST API, Bootstrap, Task Management, Open Source, Web Application, Google OAuth, Multi-Database, Production Ready">
     <meta name="author" content="TodoBox">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://faizal2007.github.io/todobox-sites/">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="TodoBox - Modern Flask Todo Application">
-    <meta property="og:description" content="Flask-based personal task management application with wisdom quotes, Google OAuth authentication, and multi-database support.">
+    <meta property="og:description" content="Flask-based personal task management application with Google OAuth authentication and multi-database support.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://faizal2007.github.io/todobox-sites/">
     <meta property="og:image" content="https://faizal2007.github.io/todobox-sites/logo.svg">
@@ -23,7 +23,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TodoBox - Modern Flask Todo Application">
-    <meta name="twitter:description" content="Flask-based personal task management application with wisdom quotes, Google OAuth authentication, and multi-database support.">
+    <meta name="twitter:description" content="Flask-based personal task management application with Google OAuth authentication and multi-database support.">
     <meta name="twitter:image" content="https://faizal2007.github.io/todobox-sites/logo.svg">
     
     <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -50,7 +50,7 @@
         <div class="container">
             <img src="logo.svg" alt="TodoBox Logo - Flask Todo Application" class="logo">
             <h1 class="display-4 font-weight-bold">TodoBox</h1>
-            <p class="lead">A Flask-based personal task management application with wisdom quotes, user authentication, and multi-database support</p>
+            <p class="lead">A Flask-based personal task management application with user authentication and multi-database support</p>
             <p class="mt-3">
                 <a href="https://github.com/faizal2007/todobox" class="btn btn-light btn-lg" target="_blank">
                     <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
@@ -83,16 +83,17 @@
     <div class="section">
         <div class="container">
             <h2 id="tech-stack-heading" class="mb-4">Tech Stack</h2>
-            <p class="mb-3">Built with modern Python web development technologies:</p>
+            <p class="mb-3">Built with modern Python web development technologies and production-ready components (as of v1.3.5):</p>
             <div>
                 <span class="tech-badge"><strong>Flask 2.3.2</strong> - Web Framework</span>
-                <span class="tech-badge"><strong>SQLAlchemy</strong> - Database ORM</span>
-                <span class="tech-badge"><strong>Flask-Login</strong> - Authentication</span>
-                <span class="tech-badge"><strong>Flask-WTF</strong> - CSRF Protection</span>
-                <span class="tech-badge"><strong>Bleach</strong> - XSS Prevention</span>
-                <span class="tech-badge"><strong>Werkzeug</strong> - Password Hashing</span>
-                <span class="tech-badge"><strong>Gunicorn</strong> - Production Server</span>
-                <span class="tech-badge"><strong>Bootstrap 4</strong> - Frontend</span>
+                <span class="tech-badge"><strong>SQLAlchemy 1.4.17</strong> - Database ORM</span>
+                <span class="tech-badge"><strong>Flask-Login 0.6.3</strong> - Authentication</span>
+                <span class="tech-badge"><strong>Flask-WTF 1.2.2</strong> - CSRF Protection</span>
+                <span class="tech-badge"><strong>Bleach 6.3.0</strong> - XSS Prevention</span>
+                <span class="tech-badge"><strong>Werkzeug 3.0.6</strong> - Password Hashing</span>
+                <span class="tech-badge"><strong>Flask-Migrate 4.1.0</strong> - Database Migrations</span>
+                <span class="tech-badge"><strong>Gunicorn 23.0.0</strong> - Production Server</span>
+                <span class="tech-badge"><strong>Bootstrap 4</strong> - Frontend UI</span>
                 <span class="tech-badge"><strong>Python 3.10+</strong> - Runtime</span>
             </div>
         </div>
@@ -105,28 +106,43 @@
             <p>Get TodoBox up and running in just a few steps:</p>
             
             <h5 class="mt-4">1. Clone the Repository</h5>
-            <div class="code-block">
-                <code>git clone https://github.com/faizal2007/todobox.git<br>cd todobox</code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>git clone https://github.com/faizal2007/todobox.git<br>cd todobox</code>
+                </div>
             </div>
 
             <h5 class="mt-4">2. Install Dependencies</h5>
-            <div class="code-block">
-                <code>pip install -r requirements.txt</code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>pip install -r requirements.txt</code>
+                </div>
             </div>
 
             <h5 class="mt-4">3. Configure Environment</h5>
-            <div class="code-block">
-                <code>cp .flaskenv.example .flaskenv<br># Edit .flaskenv with your configuration<br>python3 -c "from app.config import generate_salt; print(generate_salt())"</code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>cp .flaskenv.example .flaskenv<br># Edit .flaskenv with your configuration<br>python3 -c "from app.config import generate_salt; print(generate_salt())"</code>
+                </div>
             </div>
 
             <h5 class="mt-4">4. Initialize Database & Create User</h5>
-            <div class="code-block">
-                <code>flask db upgrade<br>python3 create_user.py<br># Follow the interactive prompts</code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>flask db upgrade<br>python3 create_user.py<br># Follow the interactive prompts</code>
+                </div>
             </div>
 
             <h5 class="mt-4">5. Run the Application</h5>
-            <div class="code-block">
-                <code>flask run</code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>flask run</code>
+                </div>
             </div>
 
             <p class="mt-3 text-muted">The application will be available at <strong>http://localhost:5000</strong></p>
@@ -141,16 +157,53 @@
             
             <div class="alert alert-info" role="alert">
                 <strong>📚 Full Documentation:</strong> For complete API documentation, visit 
-                <a href="https://github.com/faizal2007/todobox/tree/main/docs" target="_blank" style="color: #667eea; font-weight: 600;">the docs folder</a> in the repository.
+                <a href="https://github.com/faizal2007/todobox/tree/master/docs" target="_blank" style="color: #667eea; font-weight: 600;">the docs folder</a> in the repository.
             </div>
             
             <h5 class="mt-4">Key API Endpoints</h5>
-            <div class="code-block">
-                <code>GET  /api/quote          # Get daily wisdom quote<br>GET  /api/todo           # List all todos<br>POST /api/todo           # Create new todo<br>GET  /getTodo/&lt;id&gt;      # Get specific todo<br>POST /done               # Mark todo as complete</code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>GET  /api/todo           # List all todos (bearer token required)<br>POST /api/todo           # Create new todo (bearer token required)<br>GET  /getTodo/&lt;id&gt;      # Get specific todo<br>PUT  /api/todo/&lt;id&gt;     # Update todo (bearer token required)<br>DELETE /api/todo/&lt;id&gt;  # Delete todo (bearer token required)<br>POST /api/auth/token     # Generate API tokens<br>POST /done               # Mark todo as complete</code>
+                </div>
             </div>
 
-            <h5 class="mt-4">Authentication</h5>
-            <p>API tokens can be generated from your account settings for secure external access.</p>
+            <h5 class="mt-4">Authentication & Examples</h5>
+            <p><strong>Token-based Authentication:</strong> Generate API tokens from your account settings for secure external integrations. All API endpoints support Bearer token authentication.</p>
+            
+            <h6 class="mt-3">Sample cURL Commands</h6>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>
+                        # List all todos (requires token)<br>
+                        curl -H "Authorization: Bearer YOUR_TOKEN" \<br>
+                        &nbsp;&nbsp;https://todobox.example.com/api/todo<br>
+                        <br>
+                        # Create a new todo<br>
+                        curl -X POST -H "Authorization: Bearer YOUR_TOKEN" \<br>
+                        &nbsp;&nbsp;-H "Content-Type: application/json" \<br>
+                        &nbsp;&nbsp;-d '{"name":"Buy groceries","details":"Milk, eggs, bread"}' \<br>
+                        &nbsp;&nbsp;https://todobox.example.com/api/todo<br>
+                        <br>
+                        # Update a todo<br>
+                        curl -X PUT -H "Authorization: Bearer YOUR_TOKEN" \<br>
+                        &nbsp;&nbsp;-H "Content-Type: application/json" \<br>
+                        &nbsp;&nbsp;-d '{"name":"Updated task"}' \<br>
+                        &nbsp;&nbsp;https://todobox.example.com/api/todo/123<br>
+                        <br>
+                        # Delete a todo<br>
+                        curl -X DELETE -H "Authorization: Bearer YOUR_TOKEN" \<br>
+                        &nbsp;&nbsp;https://todobox.example.com/api/todo/123<br>
+                        <br>
+                        # Generate new API token<br>
+                        curl -X POST -H "Authorization: Bearer YOUR_TOKEN" \<br>
+                        &nbsp;&nbsp;https://todobox.example.com/api/auth/token
+                    </code>
+                </div>
+            </div>
+            
+            <p class="mt-3"><strong>Web Authentication:</strong> Session-based authentication with OAuth support for email/password login and Google OAuth sign-in.</p>
         </div>
     </section>
 
@@ -172,7 +225,7 @@
                     <div class="screenshot-card">
                         <img src="images/dashboard.png" alt="TodoBox Main Dashboard" class="img-fluid rounded shadow">
                         <h5 class="mt-3">Main Dashboard</h5>
-                        <p class="text-muted">Clean, organized view of all your tasks with daily wisdom quotes</p>
+                        <p class="text-muted">Clean, organized view of all your tasks with intuitive organization</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -216,56 +269,56 @@
                     <div class="feature-card">
                         <div class="feature-icon">📝</div>
                         <h5>Todo Management</h5>
-                        <p>Create, organize, and track tasks with responsive 3-4 column grid layout</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">💡</div>
-                        <h5>Wisdom Quotes</h5>
-                        <p>Daily inspiration from ZenQuotes API with local fallback system</p>
+                        <p>Create, organize, and track tasks with responsive 3-4 column grid layout and markdown support</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-card">
                         <div class="feature-icon">👤</div>
                         <h5>User Authentication</h5>
-                        <p>Email/password login and Google OAuth sign-in support</p>
+                        <p>Email/password login and Google OAuth sign-in support with secure sessions</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-card">
                         <div class="feature-icon">🎨</div>
                         <h5>Modern UI</h5>
-                        <p>Bootstrap 4 responsive design with multiple themes</p>
+                        <p>Bootstrap 4 responsive design with smooth loading indicators and intuitive navigation</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-card">
                         <div class="feature-icon">🔒</div>
                         <h5>Security</h5>
-                        <p>Password hashing, CSRF protection, XSS prevention, and secure sessions</p>
+                        <p>Password hashing, CSRF protection, XSS prevention, and secure API token authentication</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-card">
                         <div class="feature-icon">💾</div>
                         <h5>Flexible Storage</h5>
-                        <p>Support for SQLite, MySQL, and PostgreSQL databases</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h5>Ready to Deploy</h5>
-                        <p>Production-ready with unified configuration and Gunicorn support</p>
+                        <p>Support for SQLite, MySQL, and PostgreSQL with database migration tools</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-card">
                         <div class="feature-icon">🔑</div>
                         <h5>API Access</h5>
-                        <p>RESTful API with token-based authentication for external integrations</p>
+                        <p>RESTful API with token-based authentication for external integrations and automation</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h5>Reverse Proxy Support</h5>
+                        <p>Ready for deployment behind Nginx with OAuth callback URL support</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h5>Production Ready</h5>
+                        <p>Gunicorn support, Werkzeug 3.0 compatibility, and comprehensive deployment guides</p>
                     </div>
                 </div>
             </div>
@@ -277,16 +330,47 @@
         <div class="container">
             <h2 id="deployment-heading" class="mb-4">Deployment</h2>
             <div class="alert alert-success" role="alert">
-                <strong>✅ Production Ready:</strong> TodoBox is production-ready as of November 26, 2025!
+                <strong>✅ Production Ready:</strong> TodoBox v1.3.5 is production-ready as of November 30, 2025! Enhanced documentation, accessibility compliance, reverse proxy support, API token authentication, and multi-database compatibility.
             </div>
-            <p class="mb-4">Deploy TodoBox to various platforms with Gunicorn and multi-database support:</p>
+            <p class="mb-4">Deploy TodoBox to various platforms with Gunicorn and multi-database support. Latest updates include reverse proxy support for Nginx/SSH tunnels and improved UI with loading indicators.</p>
             
-            <h5 class="mt-4">Production Server</h5>
-            <div class="code-block">
-                <code>gunicorn -w 4 todobox:app  # Start with 4 workers</code>
+            <h5 class="mt-4">Production Server Setup</h5>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>
+                        # Install dependencies<br>
+                        pip install -r requirements.txt<br>
+                        <br>
+                        # Configure environment<br>
+                        cp .flaskenv.example .flaskenv<br>
+                        nano .flaskenv  # Edit with your settings<br>
+                        <br>
+                        # Initialize database<br>
+                        flask db upgrade<br>
+                        python3 create_user.py<br>
+                        <br>
+                        # Start with Gunicorn<br>
+                        gunicorn -w 4 -b 0.0.0.0:5000 todobox:app
+                    </code>
+                </div>
             </div>
             
-            <p class="mt-3">For detailed deployment instructions including Nginx configuration, SSL setup, and database configuration, see the <a href="https://github.com/faizal2007/todobox/blob/master/docs/DEPLOYMENT.md" target="_blank" style="color: #667eea; font-weight: 600;">DEPLOYMENT.md</a> guide.</p>
+            <h5 class="mt-4">Reverse Proxy Support</h5>
+            <p>Automatic reverse proxy support via Werkzeug ProxyFix middleware for deployment behind Nginx, SSH tunnels, or cloud load balancers. Configure <code>PROXY_X_*</code> settings in <code>.flaskenv</code>.</p>
+            
+            <h5 class="mt-4">Comprehensive Documentation</h5>
+            <p>23 documentation files covering all aspects of TodoBox:</p>
+            <ul>
+                <li><strong>Getting Started:</strong> SETUP.md, QUICKSTART.md, USER_CREATION.md</li>
+                <li><strong>API & Architecture:</strong> API.md, MODELS.md, ARCHITECTURE.md</li>
+                <li><strong>Deployment:</strong> DEPLOYMENT.md, DEPLOYMENT_CHECKLIST.md, OAUTH_SETUP.md</li>
+                <li><strong>Quality & Security:</strong> CODE_REVIEW.md, SECURITY_PATCHES.md, WERKZEUG_FIX.md</li>
+                <li><strong>Navigation:</strong> DOCUMENTATION_MASTER_INDEX.md, INDEX.md, OVERVIEW.md</li>
+            </ul>
+            <p>All guides include 100+ code examples, quick reference tables, troubleshooting sections, and accessibility compliance.</p>
+            
+            <p class="mt-3">For detailed deployment instructions including Nginx configuration, SSL/TLS setup, database configuration, and cloud deployment options, see the <a href="https://github.com/faizal2007/todobox/blob/master/docs/DEPLOYMENT.md" target="_blank" style="color: #667eea; font-weight: 600;">DEPLOYMENT.md</a> guide.</p>
         </div>
     </section>
 
@@ -318,20 +402,18 @@
             </div>
             
             <h5 class="mt-4">Development Setup</h5>
-            <div class="code-block">
-                <code>
-                    git clone https://github.com/faizal2007/todobox.git
-                    <br>
-                    cd todobox
-                    <br>
-                    pip install -r requirements-dev.txt
-                    <br>
-                    cp .flaskenv.example .flaskenv
-                    <br>
-                    flask db upgrade
-                    <br>
-                    flask run
-                </code>
+            <div class="code-block-wrapper">
+                <button class="copy-button" onclick="copyToClipboard(this)" title="Copy to clipboard">📋</button>
+                <div class="code-block">
+                    <code>
+                        git clone https://github.com/faizal2007/todobox.git<br>
+                        cd todobox<br>
+                        pip install -r requirements-dev.txt<br>
+                        cp .flaskenv.example .flaskenv<br>
+                        flask db upgrade<br>
+                        flask run
+                    </code>
+                </div>
             </div>
         </div>
     </section>
@@ -348,10 +430,10 @@
                     <h5>Links</h5>
                     <p>
                         <a href="https://github.com/faizal2007/todobox" target="_blank">TodoBox Repository</a> | 
-                        <a href="https://github.com/faizal2007/todobox/tree/main/docs" target="_blank">Documentation</a> | 
-                        <a href="https://github.com/faizal2007/todobox/blob/main/CHANGELOG.md" target="_blank">Changelog</a>
+                        <a href="https://github.com/faizal2007/todobox/tree/master/docs" target="_blank">Documentation</a> | 
+                        <a href="https://github.com/faizal2007/todobox/blob/master/CHANGELOG.md" target="_blank">Changelog</a>
                     </p>
-                    <p class="text-muted">Licensed under <a href="https://github.com/faizal2007/todobox/blob/main/LICENSE" target="_blank">MIT License</a></p>
+                    <p class="text-muted">Licensed under <a href="https://github.com/faizal2007/todobox/blob/master/LICENSE" target="_blank">MIT License</a></p>
                 </div>
             </div>
             <hr class="bg-light">
@@ -370,6 +452,41 @@
     
     <!-- Floating TOC Active Section Script -->
     <script>
+        // Copy to clipboard functionality
+        function copyToClipboard(button) {
+            // Get the code block parent
+            const codeBlock = button.nextElementSibling.querySelector('code');
+            
+            // Extract text and clean it
+            let text = codeBlock.innerText.trim();
+            
+            // Create a temporary textarea
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                // Update button feedback
+                const originalText = button.innerHTML;
+                button.innerHTML = '✅';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                button.innerHTML = '❌';
+            }
+            
+            document.body.removeChild(textarea);
+        }
+
+        // Floating TOC Active Section
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('div[id]');
             const navLinks = document.querySelectorAll('.toc-floating-list a');

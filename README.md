@@ -6,15 +6,15 @@ Official landing page for [TodoBox](https://github.com/faizal2007/todobox) - A m
 
 This repository hosts the static website for TodoBox at [https://faizal2007.github.io/todobox-sites/](https://faizal2007.github.io/todobox-sites/)
 
-## Latest Features (v1.3.5 - Nov 30, 2025)
+## Latest Updates (v1.6.3+ - Dec 7, 2025)
 
-✨ **NEW & UPDATED:**
-- 🔑 **API Token Authentication** - Secure token-based API access for external integrations
-- 🌐 **Reverse Proxy Support** - Werkzeug ProxyFix middleware for Nginx/SSH tunnel deployments
-- ⚡ **Loading Indicators** - Visual feedback during async todo operations
-- 📊 **Dashboard Improvements** - Recent todos view excludes completed items
-- 🔒 **Enhanced Security** - Username immutability, secure API token management
-- 📚 **Complete Documentation** - 23 comprehensive guides with 100+ code examples and accessibility compliance
+✨ **LATEST FIXES & IMPROVEMENTS:**
+- 🐛 **Critical Bug Fixes** - Mark as KIV button working, dashboard dates fixed, recent todos display corrected
+- 🧪 **Comprehensive Testing** - 25-test suite against real MySQL database, test files reorganized to tests/ folder
+- 📝 **Markdown Standards** - Language specifiers added to all 354 code blocks across documentation
+- 📚 **Documentation Cleanup** - Simplified CHANGELOG, reorganized docs structure, improved navigation
+- 🔒 **Security Enhancements** - GitHub code scanning alerts addressed, debug mode disabled, CDN integrity checks
+- 🗂️ **Better Organization** - Test structure follows Python best practices, all tests in tests/ folder
 
 ## Features Highlighted
 
@@ -48,39 +48,30 @@ This repository hosts the static website for TodoBox at [https://faizal2007.gith
 
 ## Status
 
-✅ **Production Ready** (November 30, 2025 - v1.3.5)
+✅ **Production Ready** (December 7, 2025 - Latest)
 
-## Recent Releases
+## Recent Updates (December 7, 2025)
 
-### v1.3.5 (Nov 30) - Documentation Recheck & Accessibility
-- Fixed trailing punctuation in headings for markdown compliance
-- Corrected emphasis usage in documentation files
-- Enhanced accessibility standards compliance
-- 23 comprehensive documentation files fully validated
-- Complete documentation ecosystem with navigation guides
+### Latest - Critical Fixes & Testing
+- **Fixed**: Mark as KIV button not working on /undone page - updated route to add todo to KIV table
+- **Fixed**: Dashboard dates showing as script tags - refactored momentjs to server-side Python datetime
+- **Fixed**: Dashboard Recent Todos not displaying dates - simplified query with proper filtering
+- **Added**: Comprehensive test suite (25 tests) against real MySQL database with 100% pass rate
+- **Changed**: Test files reorganized to tests/ folder following Python best practices
+- **Changed**: Documentation reorganized with simplified CHANGELOG and archived analysis docs
 
-### v1.3.4 (Nov 29) - Documentation Update
-- Fixed markdown formatting across all documentation files
-- Updated code fence syntax for consistency
-- All documentation now passes validation
+### Documentation & Standards (Dec 7)
+- **Refactor**: Added language specifiers to all 354 bare code blocks in 24 markdown files
+- **Improved**: Markdown compliance across all documentation with proper code fences
+- **Security**: Fixed GitHub code scanning alerts (debug mode, CDN integrity checks)
 
-### v1.3.3 (Nov 29) - Reverse Proxy Support & Dashboard Fix
-- Werkzeug ProxyFix middleware for reverse proxy deployments
-- OAuth callback URL support behind proxies
-- Dashboard "Recent Todos" now excludes completed items
-- Optimized query performance
-
-### v1.3.2 (Nov 27) - UI/UX Enhancements
-- Loading indicators for AJAX operations
-- Button state management to prevent double-clicks
-- Username immutability for security
-- Enhanced user experience flow
-
-### v1.1.0 (Nov 26) - API Authentication
-- Bearer token-based API authentication system
-- API token generation and management
-- Secure external integrations
-- JSON error responses for API requests
+### Previous Releases
+- **v1.6.3** - Secure account deletion, root index route, PWA support
+- **v1.6.0** - JavaScript optimization (jQuery to vanilla JS), 15% faster execution
+- **v1.5.0** - Auto-close reminders, timezone support, PWA install
+- **v1.4.0** - Dashboard time period grouping, reminder system
+- **v1.3.3** - Reverse proxy support, OAuth fixes
+- **v1.1.0** - API authentication with Bearer tokens
 
 ## Get Started
 

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- SEO Meta Tags -->
-    <title>TodoBox v1.3.5 - Modern Flask Todo Application with Complete Documentation</title>
-    <meta name="description" content="TodoBox v1.3.5 - Flask-based personal task management application with user authentication, Google OAuth, 23 comprehensive docs with 100+ examples, multi-database support (SQLite/MySQL/PostgreSQL). Production-ready with accessibility compliance.">
+    <title>TodoBox - Modern Flask Todo Application with Comprehensive Testing</title>
+    <meta name="description" content="TodoBox - Flask-based personal task management application with user authentication, Google OAuth, comprehensive test suite (25 tests), 23+ documentation files with 100+ examples, multi-database support (SQLite/MySQL/PostgreSQL). Production-ready with critical bug fixes and enhanced testing.">
     <meta name="keywords" content="Flask, Todo App, Python, SQLAlchemy, Flask-Login, REST API, Bootstrap, Task Management, Open Source, Web Application, Google OAuth, Multi-Database, Production Ready">
     <meta name="author" content="TodoBox">
     <meta name="robots" content="index, follow">
@@ -62,11 +62,39 @@
         </div>
     </div>
 
+    <!-- Latest Updates Banner -->
+    <section class="section bg-light" id="latest-updates" style="padding: 2rem 0;">
+        <div class="container">
+            <div class="alert alert-info" role="alert" style="border-left: 5px solid #667eea; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+                <h4 class="alert-heading" style="color: #667eea;">🎉 Latest Updates - December 7, 2025</h4>
+                <hr>
+                <p class="mb-0"><strong>Critical Bug Fixes:</strong></p>
+                <ul class="mb-2">
+                    <li>✅ Fixed "Mark as KIV" button on /undone page - now properly adds todo to KIV table</li>
+                    <li>✅ Fixed dashboard dates showing as script tags - refactored to server-side Python datetime</li>
+                    <li>✅ Fixed dashboard "Recent Todos" not displaying dates - optimized query with proper filtering</li>
+                </ul>
+                <p class="mb-0"><strong>Testing & Quality:</strong></p>
+                <ul class="mb-2">
+                    <li>🧪 Added comprehensive test suite with 25 tests against real MySQL database (100% pass rate)</li>
+                    <li>📁 Reorganized test files to tests/ folder following Python best practices</li>
+                    <li>📝 All 354 code blocks now have proper language specifiers for markdown compliance</li>
+                </ul>
+                <p class="mb-0"><strong>Security & Documentation:</strong></p>
+                <ul class="mb-0">
+                    <li>🔒 Addressed GitHub code scanning alerts (debug mode disabled, CDN integrity checks)</li>
+                    <li>📚 Simplified CHANGELOG, reorganized documentation structure with archived analysis docs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Table of Contents - Floating Navigation -->
     <nav class="toc-floating" aria-label="Page navigation">
         <div class="toc-floating-card">
             <h4 class="toc-floating-title">📖 Guide</h4>
             <ul class="toc-floating-list">
+                <li><a href="#latest-updates" aria-label="Latest Updates">🎉 Latest</a></li>
                 <li><a href="#tech-stack" aria-label="Tech Stack section">🛠️ Tech Stack</a></li>
                 <li><a href="#quick-start" aria-label="Quick Start guide">🚀 Quick Start</a></li>
                 <li><a href="#api-docs" aria-label="API Documentation">📡 API Docs</a></li>
@@ -83,7 +111,7 @@
     <div class="section">
         <div class="container">
             <h2 id="tech-stack-heading" class="mb-4">Tech Stack</h2>
-            <p class="mb-3">Built with modern Python web development technologies and production-ready components (as of v1.3.5):</p>
+            <p class="mb-3">Built with modern Python web development technologies and production-ready components (Latest - December 7, 2025):</p>
             <div>
                 <span class="tech-badge"><strong>Flask 2.3.2</strong> - Web Framework</span>
                 <span class="tech-badge"><strong>SQLAlchemy 1.4.17</strong> - Database ORM</span>
@@ -321,6 +349,13 @@
                         <p>Gunicorn support, Werkzeug 3.0 compatibility, and comprehensive deployment guides</p>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧪</div>
+                        <h5>Comprehensive Testing</h5>
+                        <p>25-test suite against real MySQL database with 100% pass rate ensuring reliability</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -330,9 +365,9 @@
         <div class="container">
             <h2 id="deployment-heading" class="mb-4">Deployment</h2>
             <div class="alert alert-success" role="alert">
-                <strong>✅ Production Ready:</strong> TodoBox v1.3.5 is production-ready as of November 30, 2025! Enhanced documentation, accessibility compliance, reverse proxy support, API token authentication, and multi-database compatibility.
+                <strong>✅ Production Ready:</strong> TodoBox is production-ready as of December 7, 2025! Critical bug fixes, comprehensive test suite (25 tests with 100% pass rate), enhanced documentation with markdown compliance, security improvements, and multi-database compatibility.
             </div>
-            <p class="mb-4">Deploy TodoBox to various platforms with Gunicorn and multi-database support. Latest updates include reverse proxy support for Nginx/SSH tunnels and improved UI with loading indicators.</p>
+            <p class="mb-4">Deploy TodoBox to various platforms with Gunicorn and multi-database support. Latest updates include critical bug fixes for KIV functionality, dashboard improvements, comprehensive testing against real databases, and security enhancements.</p>
             
             <h5 class="mt-4">Production Server Setup</h5>
             <div class="code-block-wrapper">

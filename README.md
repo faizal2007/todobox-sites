@@ -6,24 +6,33 @@ Official landing page for [TodoBox](https://github.com/faizal2007/todobox) - A m
 
 This repository hosts the static website for TodoBox at [https://faizal2007.github.io/todobox-sites/](https://faizal2007.github.io/todobox-sites/)
 
-## Latest Updates (v1.6.3+ - Dec 7, 2025)
+## Latest Updates (January 2025)
 
-✨ **LATEST FIXES & IMPROVEMENTS:**
+✨ **LATEST FEATURES & IMPROVEMENTS:**
+- 🔐 **Terms and Disclaimer Management** - Admin can create/manage terms with version control system
+- 📝 **User Registration System** - Self-service registration with email verification and terms acceptance
+- ✏️ **Strikethrough Support** - SimpleMDE editor includes strikethrough formatting (Ctrl+Shift+S)
+- 🕐 **KIV Status** - Keep tasks in view with dedicated KIV (Keep In View) status for tasks on hold
+
+✨ **PREVIOUS CRITICAL FIXES (December 2025):**
 - 🐛 **Critical Bug Fixes** - Mark as KIV button working, dashboard dates fixed, recent todos display corrected
 - 🧪 **Comprehensive Testing** - 25-test suite against real MySQL database, test files reorganized to tests/ folder
 - 📝 **Markdown Standards** - Language specifiers added to all 354 code blocks across documentation
 - 📚 **Documentation Cleanup** - Simplified CHANGELOG, reorganized docs structure, improved navigation
-- 🔒 **Security Enhancements** - GitHub code scanning alerts addressed, debug mode disabled, CDN integrity checks
+- 🔒 **Security Enhancements** - Account deletion cooldown, GitHub code scanning alerts addressed
 - 🗂️ **Better Organization** - Test structure follows Python best practices, all tests in tests/ folder
 
 ## Features Highlighted
 
 - 📝 **Todo Management** - Task organization with responsive grid layout and markdown support
-- 👤 **User Authentication** - Email/password and Google OAuth sign-in
+- 👤 **User Authentication** - Email/password and Google OAuth sign-in with email verification
+- 📋 **User Registration** - Self-service account creation with email verification and terms acceptance
+- 🕐 **KIV Status** - Keep tasks in view with dedicated status for tasks on hold
 - 🔑 **API Access** - RESTful API with Bearer token authentication for external integrations
 - 🎨 **Modern UI** - Bootstrap 4 responsive design with loading indicators
 - 🔒 **Security** - Password hashing, CSRF protection, XSS prevention, secure sessions
 - 💾 **Flexible Storage** - SQLite, MySQL, PostgreSQL support with migrations
+- 📄 **Terms Management** - Admin-managed terms and disclaimer with version control
 - 🌐 **Reverse Proxy Ready** - Deploy behind Nginx with automatic proxy header handling
 - 🚀 **Production Ready** - Gunicorn support, Werkzeug 3.0 compatibility, comprehensive deployment guides
 
@@ -48,11 +57,17 @@ This repository hosts the static website for TodoBox at [https://faizal2007.gith
 
 ## Status
 
-✅ **Production Ready** (December 7, 2025 - Latest)
+✅ **Production Ready** (January 2025 - Latest)
 
-## Recent Updates (December 7, 2025)
+## Recent Updates (January 2025)
 
-### Latest - Critical Fixes & Testing
+### Latest - New Features
+- **Added**: Terms and Disclaimer Management System with admin controls and version tracking
+- **Added**: User Registration System with email verification and terms acceptance
+- **Added**: Strikethrough support in SimpleMDE editor (Ctrl+Shift+S keyboard shortcut)
+- **Added**: KIV (Keep In View) status for tracking tasks on hold
+
+### Previous Critical Fixes & Testing (December 2025)
 - **Fixed**: Mark as KIV button not working on /undone page - updated route to add todo to KIV table
 - **Fixed**: Dashboard dates showing as script tags - refactored momentjs to server-side Python datetime
 - **Fixed**: Dashboard Recent Todos not displaying dates - simplified query with proper filtering
@@ -60,10 +75,10 @@ This repository hosts the static website for TodoBox at [https://faizal2007.gith
 - **Changed**: Test files reorganized to tests/ folder following Python best practices
 - **Changed**: Documentation reorganized with simplified CHANGELOG and archived analysis docs
 
-### Documentation & Standards (Dec 7)
+### Documentation & Standards (December 2025)
 - **Refactor**: Added language specifiers to all 354 bare code blocks in 24 markdown files
 - **Improved**: Markdown compliance across all documentation with proper code fences
-- **Security**: Fixed GitHub code scanning alerts (debug mode, CDN integrity checks)
+- **Security**: Fixed GitHub code scanning alerts, account deletion cooldown system
 
 ### Previous Releases
 - **v1.6.3** - Secure account deletion, root index route, PWA support

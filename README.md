@@ -6,31 +6,41 @@ Official landing page for [TodoBox](https://github.com/faizal2007/todobox) - A m
 
 This repository hosts the static website for TodoBox at [https://faizal2007.github.io/todobox-sites/](https://faizal2007.github.io/todobox-sites/)
 
-## Latest Updates (January 2025)
+## Latest Updates (January 2026)
 
-✨ **LATEST FEATURES & IMPROVEMENTS:**
+✨ **NEWEST FEATURES (January 2026):**
+- ✅ **Simple Todo Mode** - Quick-creation checklist todos with on-the-fly conversion between simple and advanced modes
+- 🏆 **Achievement Modal** - Interactive modal for viewing completed todo details with time-to-completion tracking
+- 🎯 **Smart Description Rendering** - Intelligent detection and rendering of markdown checklists vs advanced content
+- 📊 **Dashboard Analytics** - Track tasks with donut charts grouped by time periods (today, weekly, monthly, yearly)
+- 💡 **Wisdom Quotes** - Daily inspiration from ZenQuotes API with local fallback
+- 📱 **PWA Support** - Install as a Progressive Web App on mobile and desktop devices
+
+✨ **PREVIOUS UPDATES (2025):**
 - 🔐 **Terms and Disclaimer Management** - Admin can create/manage terms with version control system
 - 📝 **User Registration System** - Self-service registration with email verification and terms acceptance
-- ✏️ **Strikethrough Support** - SimpleMDE editor includes strikethrough formatting (Ctrl+Shift+S)
 - 🕐 **KIV Status** - Keep tasks in view with dedicated KIV (Keep In View) status for tasks on hold
-
-✨ **PREVIOUS CRITICAL FIXES (December 2025):**
 - 🐛 **Critical Bug Fixes** - Mark as KIV button working, dashboard dates fixed, recent todos display corrected
-- 🧪 **Comprehensive Testing** - 25-test suite against real MySQL database, test files reorganized to tests/ folder
-- 📝 **Markdown Standards** - Language specifiers added to all 354 code blocks across documentation
-- 📚 **Documentation Cleanup** - Simplified CHANGELOG, reorganized docs structure, improved navigation
-- 🔒 **Security Enhancements** - Account deletion cooldown, GitHub code scanning alerts addressed
-- 🗂️ **Better Organization** - Test structure follows Python best practices, all tests in tests/ folder
+- 🧪 **Comprehensive Testing** - Multi-layer testing strategy with 44+ tests covering backend, frontend, and assets
+- 🔒 **Security Enhancements** - Account deletion cooldown, GitHub code scanning alerts addressed, pre-commit hooks
+- ⚡ **Performance Optimization** - JavaScript modernization (jQuery to vanilla JS), 15% faster execution
 
 ## Features Highlighted
 
-- 📝 **Todo Management** - Task organization with responsive grid layout and markdown support
+- 📝 **Todo Management** - Task organization with responsive grid layout, markdown support, and simple/advanced modes
+- ✅ **Simple Todo Mode** - Quick checklist creation with on-the-fly conversion to advanced markdown editing
+- 🏆 **Achievement Tracking** - View completed todos with detailed completion metrics and time tracking
+- 💡 **Wisdom Quotes** - Daily inspiration from ZenQuotes API with local fallback quotes
 - 👤 **User Authentication** - Email/password and Google OAuth sign-in with email verification
 - 📋 **User Registration** - Self-service account creation with email verification and terms acceptance
 - 🕐 **KIV Status** - Keep tasks in view with dedicated status for tasks on hold
+- 📊 **Dashboard Analytics** - Task tracking with donut charts grouped by time periods (today, weekly, monthly, yearly)
 - 🔑 **API Access** - RESTful API with Bearer token authentication for external integrations
-- 🎨 **Modern UI** - Bootstrap 4 responsive design with loading indicators
-- 🔒 **Security** - Password hashing, CSRF protection, XSS prevention, secure sessions
+- ⏰ **Smart Reminders** - Set reminders with automatic timezone detection and auto-close after 3 notifications
+- 🌍 **Timezone Support** - Automatic timezone detection based on IP geolocation with 43+ timezone options
+- 📱 **PWA Support** - Install as a Progressive Web App on mobile and desktop devices
+- 🎨 **Modern UI** - Bootstrap 4 responsive design with loading indicators and smooth animations
+- 🔒 **Security** - Password hashing, CSRF protection, XSS prevention, secure sessions, pre-commit hooks
 - 💾 **Flexible Storage** - SQLite, MySQL, PostgreSQL support with migrations
 - 📄 **Terms Management** - Admin-managed terms and disclaimer with version control
 - 🌐 **Reverse Proxy Ready** - Deploy behind Nginx with automatic proxy header handling
@@ -57,28 +67,33 @@ This repository hosts the static website for TodoBox at [https://faizal2007.gith
 
 ## Status
 
-✅ **Production Ready** (January 2025 - Latest)
+✅ **Production Ready** (January 2026 - Latest)
 
-## Recent Updates (January 2025)
+## Recent Updates (January 2026)
 
-### Latest - New Features
+### Latest - New Features (January 2026)
+- **Added**: Simple Todo Mode - Quick checklist creation with on-the-fly conversion between simple and advanced modes
+- **Added**: Achievement Modal - Interactive modal for viewing completed todo details with time-to-completion tracking
+- **Added**: Smart Description Rendering - Intelligent markdown checkbox detection and rendering
+- **Added**: Dashboard Analytics - Donut charts grouped by time periods (today, weekly, monthly, yearly)
+- **Added**: Wisdom Quotes - Daily inspiration from ZenQuotes API with local fallback
+- **Added**: PWA Support - Install as a Progressive Web App on mobile and desktop devices
+
+### Critical Fixes & Testing (2025)
+- **Fixed**: Service Worker blocking external resources (CDN, fonts, scripts)
+- **Fixed**: Recent Todos showing completed tasks and wrong page links
+- **Fixed**: KIV todos not showing in KIV tab after marking, deletion foreign key errors
+- **Added**: Comprehensive multi-layer testing (44+ tests: backend, frontend, assets)
+- **Added**: Pre-commit hooks for quality assurance and syntax checking
+- **Security**: Fixed GitHub code scanning alerts, account deletion cooldown system
+- **Performance**: JavaScript optimization (jQuery to vanilla JS), 15% faster execution
+
+### Previous Features (2025)
 - **Added**: Terms and Disclaimer Management System with admin controls and version tracking
 - **Added**: User Registration System with email verification and terms acceptance
-- **Added**: Strikethrough support in SimpleMDE editor (Ctrl+Shift+S keyboard shortcut)
 - **Added**: KIV (Keep In View) status for tracking tasks on hold
-
-### Previous Critical Fixes & Testing (December 2025)
-- **Fixed**: Mark as KIV button not working on /undone page - updated route to add todo to KIV table
-- **Fixed**: Dashboard dates showing as script tags - refactored momentjs to server-side Python datetime
-- **Fixed**: Dashboard Recent Todos not displaying dates - simplified query with proper filtering
-- **Added**: Comprehensive test suite (25 tests) against real MySQL database with 100% pass rate
-- **Changed**: Test files reorganized to tests/ folder following Python best practices
-- **Changed**: Documentation reorganized with simplified CHANGELOG and archived analysis docs
-
-### Documentation & Standards (December 2025)
-- **Refactor**: Added language specifiers to all 354 bare code blocks in 24 markdown files
-- **Improved**: Markdown compliance across all documentation with proper code fences
-- **Security**: Fixed GitHub code scanning alerts, account deletion cooldown system
+- **Added**: Auto-close reminders after 3 notifications within 30 minutes
+- **Added**: Timezone support with automatic detection and 43+ timezone options
 
 ### Previous Releases
 - **v1.6.3** - Secure account deletion, root index route, PWA support
